@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HydroGrid | Bengaluru Municipal Water Intelligence</title>
+  
+  <!-- Prevent Theme Flash Before First Paint (Default to Original Light Mode) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('hydrogrid-theme') || 'light';
+      let effectiveTheme = savedTheme;
+      if (savedTheme === 'system') {
+        effectiveTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', effectiveTheme);
+      document.documentElement.setAttribute('data-color-scheme', savedTheme);
+      
+      const collapsed = localStorage.getItem('hydrogrid_sidebar_collapsed') === 'true';
+      if (collapsed) {
+        document.documentElement.classList.add('sidebar-init-collapsed');
+      }
+    })();
+  </script>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet 1.9.4 CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Plotly 2.35.2 Cartesian CDN with fallback -->
+  <script src="https://cdn.plot.ly/plotly-cartesian-2.35.2.min.js" onerror="this.onerror=null;this.src='https://cdn.plot.ly/plotly-2.35.2.min.js';"></script>
+
+  <!-- Editorial Design Tokens & Styles -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23C15F3C'%3E%3Cpath d='M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z'/%3E%3C/svg%3E">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#view-content" class="skip-link">Skip to main content</a>
+
+  <!-- Offline / Disconnected Banner -->
+  <div id="offline-banner" style="display: none; background: var(--amber); color: #FFFFFF; font-size: 12.5px; font-weight: 500; text-align: center; padding: 6px 12px; z-index: 10000;">
+    System connection unavailable. Operating on local cache.
+  </div>
+
+  <div id="app-root">
+    <!-- Left Rail Navigation -->
+    <aside class="sidebar" id="app-sidebar" data-tour="sidebar">
+      <div>
+        <!-- Brand Header (Clean: No 2.0 Badge) -->
+        <div class="brand">
+          <div class="brand-main">
+            <svg class="brand-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" fill="var(--accent)" stroke="none"></path>
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+            </svg>
+            <span class="brand-name">HydroGrid</span>
+          </div>
+          <button id="sidebar-collapse-btn" class="sidebar-toggle-btn" title="Toggle sidebar width" aria-label="Toggle sidebar width">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Main Navigation Links -->
+        <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation" data-tour="nav-menu">
+          <a class="nav-item active" data-route="overview" href="#/overview" title="Overview (G then O)">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="9"></rect>
+              <rect x="14" y="3" width="7" height="5"></rect>
+              <rect x="14" y="12" width="7" height="9"></rect>
+              <rect x="3" y="16" width="7" height="5"></rect>
+            </svg>
+            <span class="nav-label">Overview</span>
+          </a>
+
+          <a class="nav-item" data-route="map" href="#/map" title="City Map (G then M)">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+              <line x1="8" y1="2" x2="8" y2="18"></line>
+              <line x1="16" y1="6" x2="16" y2="22"></line>
+            </svg>
+            <span class="nav-label">City Map</span>
+          </a>
+
+          <a class="nav-item" data-route="forecast" href="#/forecast" title="Forecast (G then F)">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+              <polyline points="17 6 23 6 23 12"></polyline>
+            </svg>
+            <span class="nav-label">Forecast</span>
+          </a>
+
+          <a class="nav-item" data-route="risk" href="#/risk" title="Cascade Risk (G then R)">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
+            <span class="nav-label">Cascade Risk</span>
+          </a>
+
+          <a class="nav-item" data-route="optimizer" href="#/optimizer" title="Optimizer (G then P)">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            <span class="nav-label">Optimizer</span>
+          </a>
+
+          <a class="nav-item" data-route="recourse" href="#/recourse" title="Recourse (G then C)">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span class="nav-label">Recourse</span>
+          </a>
+
+          <a class="nav-item" data-route="health" href="#/health" title="Model Health (G then H)">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+            </svg>
+            <span class="nav-label">Model Health</span>
+          </a>
+
+          <a class="nav-item" data-route="methods" href="#/methods" title="Methods & Provenance (G then T)">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span class="nav-label">Methods</span>
+          </a>
+        </nav>
+      </div>
+
+      <!-- Sidebar Footer (Quiet: Only Present Button, No Simulated Pill, No Theme Sun) -->
+      <div class="sidebar-footer">
+        <button id="btn-start-present" class="sidebar-present-btn" title="Enter distraction-free presentation mode (P)" data-tour="present-btn">
+          <svg style="width: 14px; height: 14px; flex-shrink: 0;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          <span>Present</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+      <!-- Top Application Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <button id="mobile-menu-btn" class="header-mobile-toggle" aria-label="Toggle navigation">
+            <svg style="width: 20px; height: 20px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          
+          <div class="header-title-block">
+            <h1 id="header-view-title" class="header-title">Executive Briefing</h1>
+            <!-- Data Sources link -->
+            <a href="#/methods" class="topbar-data-sources-link" data-tour="data-sources-link" title="Inspect official civic datasets & simulation provenance">
+              <span>ⓘ Data sources</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Consistent Top Toolbar: [ Jump to ward ] [ Date selector ] [ Theme toggle ] [ Help (?) menu ] -->
+        <div class="header-right topbar-toolbar" data-tour="top-toolbar">
+          
+          <!-- 1. Jump to ward combobox -->
+          <div class="combobox-search" id="combobox-search-container">
+            <div class="combobox-search-box">
+              <svg style="width: 14px; height: 14px; color: var(--text-3);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input id="header-ward-search" class="combobox-search-input" type="text" placeholder="Jump to ward..." autocomplete="off">
+              <span class="combobox-kbd">/</span>
+            </div>
+            <div id="header-search-results" class="combobox-dropdown"></div>
+          </div>
+
+          <!-- 2. Date Selector -->
+          <div class="date-selector-group">
+            <button id="btn-date-prev" class="date-selector-btn" title="Previous Day">‹</button>
+            <input id="header-date-input" class="date-selector-input" type="date" value="2024-06-15" min="2024-01-01" max="2024-12-31" title="Select date (Press D)">
+            <button id="btn-date-next" class="date-selector-btn" title="Next Day">›</button>
+          </div>
+
+          <!-- 3. Theme Mode Selector with Dropdown Options (White / Dark / System) -->
+          <div class="theme-menu-container" id="theme-menu-container">
+            <button id="theme-menu-btn" class="theme-mode-btn" title="Change theme (White / Dark / System)" aria-label="Theme options" aria-haspopup="true">
+              <span id="theme-current-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+              </span>
+              <span id="theme-current-label">White</span>
+              <svg style="width: 10px; height: 10px; opacity: 0.6; margin-left: 1px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div id="theme-dropdown" class="theme-dropdown" role="menu">
+              <div class="theme-dropdown-item active" data-theme-val="light" role="menuitem">
+                <div class="theme-item-left">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                  </svg>
+                  <span>White (Light)</span>
+                </div>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="theme-dropdown-item" data-theme-val="dark" role="menuitem">
+                <div class="theme-item-left">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                  </svg>
+                  <span>Dark</span>
+                </div>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div class="theme-dropdown-item" data-theme-val="system" role="menuitem">
+                <div class="theme-item-left">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line>
+                  </svg>
+                  <span>System</span>
+                </div>
+                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Help (?) Menu -->
+          <div class="help-menu-container">
+            <button id="help-menu-btn" class="help-btn" title="Help and resources (?)" aria-label="Help menu">?</button>
+            <div id="help-dropdown" class="help-dropdown">
+              <div id="menu-item-tour" class="help-dropdown-item">
+                <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                <span>Take the tour</span>
+              </div>
+              <div id="menu-item-shortcuts" class="help-dropdown-item">
+                <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                  <path d="M6 8h.001M10 8h.001M14 8h.001M18 8h.001M8 12h.001M12 12h.001M16 12h.001M7 16h10"></path>
+                </svg>
+                <span>Keyboard shortcuts</span>
+              </div>
+              <a href="#/methods" id="menu-item-sources" class="help-dropdown-item">
+                <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span>Data sources</span>
+              </a>
+              <div class="help-dropdown-divider"></div>
+              <div id="menu-item-about" class="help-dropdown-item">
+                <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                </svg>
+                <span>About HydroGrid</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Share / Copy Link Button -->
+          <button id="btn-copy-link" class="btn btn-secondary btn-icon" title="Copy shareable link" aria-label="Copy shareable link">
+            <span id="copy-btn-icon" style="display: flex; align-items: center; justify-content: center;">
+              <svg style="width: 14px; height: 14px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </span>
+          </button>
+
+        </div>
+      </header>
+
+      <!-- Main Scrollable View Container -->
+      <main class="view-container">
+        <div id="view-content" class="view-content" tabindex="-1">
+          <!-- Dynamically injected view content -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Floating Presentation Mode Navigation Bar -->
+  <div id="present-mode-bar" class="present-mode-bar">
+    <span style="font-size: 12px; font-weight: 500; color: var(--text-2);">Presentation Mode</span>
+    <div style="display: flex; gap: 6px;">
+      <button id="present-btn-prev" class="btn btn-ghost" style="padding: 3px 8px; font-size: 11.5px;">‹ Prev</button>
+      <button id="present-btn-next" class="btn btn-primary" style="padding: 3px 8px; font-size: 11.5px;">Next ›</button>
+    </div>
+    <button id="present-btn-exit" class="btn btn-ghost" style="padding: 3px 8px; font-size: 11.5px;">Exit (Esc)</button>
+  </div>
+
+  <!-- Automatic Guided Tour Spotlight Overlay -->
+  <svg id="tour-spotlight-svg" aria-hidden="true" style="display: none;">
+    <defs>
+      <mask id="spotlight-mask">
+        <!-- Everything white is visible (darkened overlay) -->
+        <rect x="0" y="0" width="100%" height="100%" fill="white"></rect>
+        <!-- Black cutout around the spotlighted element -->
+        <rect id="spotlight-cutout" x="0" y="0" width="0" height="0" rx="8" ry="8" fill="black"></rect>
+      </mask>
+    </defs>
+    <rect x="0" y="0" width="100%" height="100%" fill="rgba(0, 0, 0, 0.55)" mask="url(#spotlight-mask)"></rect>
+  </svg>
+
+  <!-- Tour Step Card -->
+  <div id="tour-card" role="dialog" aria-live="polite" aria-labelledby="tour-card-title">
+    <div class="tour-card-header">
+      <span id="tour-step-badge" class="tour-step-badge">1 of 11</span>
+      <button id="tour-btn-close" style="background: none; border: none; font-size: 18px; color: var(--text-3); cursor: pointer;" title="Close tour (Esc)">×</button>
+    </div>
+    <h3 id="tour-card-title" class="tour-card-title">Welcome to HydroGrid</h3>
+    <div id="tour-card-body" class="tour-card-body">Description text goes here...</div>
+    <div class="tour-card-footer">
+      <label class="tour-checkbox-label">
+        <input type="checkbox" id="tour-dont-show-checkbox">
+        <span>Don't show again</span>
+      </label>
+      <div style="display: flex; gap: 6px;">
+        <button id="tour-btn-prev" class="btn btn-ghost" style="padding: 4px 10px; font-size: 12px;">Back</button>
+        <button id="tour-btn-next" class="btn btn-primary" style="padding: 4px 12px; font-size: 12px;">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Keyboard Shortcuts Modal -->
+  <div id="shortcuts-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Keyboard Shortcuts</h3>
+        <button id="shortcuts-close-btn" class="modal-close-btn" aria-label="Close shortcuts">×</button>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; font-size: 13px;">
+        <div>
+          <div style="font-weight: 600; color: var(--text); margin-bottom: 10px; font-size: 11.5px; text-transform: uppercase; color: var(--text-3);">Navigation</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Overview</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">G then O</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">City Map</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">G then M</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Forecast</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">G then F</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Cascade Risk</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">G then R</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Optimizer</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">G then P</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Recourse</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">G then C</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Model Health</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">G then H</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Methods</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">G then T</kbd></div>
+          </div>
+        </div>
+
+        <div>
+          <div style="font-weight: 600; color: var(--text); margin-bottom: 10px; font-size: 11.5px; text-transform: uppercase; color: var(--text-3);">Actions & Tools</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Focus Ward Search</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">/ or Ctrl+K</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Toggle Theme</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">T</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Date Picker</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">D</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Present Mode</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">P</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Show Shortcuts</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">?</kbd></div>
+            <div style="display: flex; justify-content: space-between;"><span style="color: var(--text-2);">Close Dialog / Esc</span><kbd style="font-family: var(--font-mono); background: var(--surface-2); padding: 1px 6px; border-radius: 4px; border: 1px solid var(--border);">Esc</kbd></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About HydroGrid Modal -->
+  <div id="about-modal" class="modal-overlay" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">About HydroGrid</h3>
+        <button id="about-close-btn" class="modal-close-btn" aria-label="Close about">×</button>
+      </div>
+      <div style="font-size: 13.5px; color: var(--text-2); line-height: 1.6;">
+        <p style="margin-bottom: 12px;">
+          <strong>HydroGrid</strong> is an open municipal water informatics platform developed to forecast spatial water deficits, bound uncertainty with 90% statistical confidence, and optimize treated wastewater reuse for Bengaluru.
+        </p>
+        <div style="background: var(--surface-2); padding: 12px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border); margin-bottom: 14px;">
+          <div style="font-weight: 600; color: var(--text); font-size: 12px; margin-bottom: 4px;">Civic Anchors & Authenticity</div>
+          <p style="margin: 0; font-size: 12.5px;">
+            Ward boundaries (225 wards), census population (8.449M), public borewells (7,433), STPs (39 plants), and transmission pipelines are authentic municipal GIS data. Daily demand series and failure onsets are mathematically simulated for stress evaluation.
+          </p>
+        </div>
+        <p style="font-size: 12px; color: var(--text-3); margin: 0;">
+          All code and datasets are auditable under the Methods view (<a href="#/methods">#/methods</a>).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="app-toast"></div>
+
+  <!-- Main Application Script -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

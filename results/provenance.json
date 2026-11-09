@@ -1,0 +1,62 @@
+[
+  {
+    "component": "ward_geometry",
+    "chosen_file": "new_dataset/wards/BBMP Final Wards Map - 2023.kml",
+    "status": "real",
+    "note": "Newest final administrative ward boundary delimitation (225 wards)"
+  },
+  {
+    "component": "population",
+    "chosen_file": "new_dataset/population/BBMP 2014 Ward Delimitation Details.csv",
+    "status": "real",
+    "note": "Official census population and area details matched via fuzzy name/number alignment"
+  },
+  {
+    "component": "temperature",
+    "chosen_file": "new_dataset/rainfall/Bengaluru Daily Temperature Data 1951 to 2024.csv",
+    "status": "real",
+    "note": "73 years of daily max and min temperature records"
+  },
+  {
+    "component": "rainfall",
+    "chosen_file": "new_dataset/rainfall/Bengaluru Monthly Rainfall Data (1900-2025).csv",
+    "status": "real",
+    "note": "Longest historical monthly precipitation series"
+  },
+  {
+    "component": "groundwater_depth",
+    "chosen_file": "new_dataset/borewells/Bengaluru Ground Water Depth 2013.kml",
+    "status": "real",
+    "note": "Spatial depth contours and point monitoring samples"
+  },
+  {
+    "component": "stps",
+    "chosen_file": "new_dataset/supply/SewageTreatmentPlantLocation.csv",
+    "status": "real",
+    "note": "39 operational STPs parsed, total reuse capacity 548.60 MLD"
+  },
+  {
+    "component": "trunk_pipelines",
+    "chosen_file": "new_dataset/supply/MapBWSSBwaterSupplyLinesDiameterGreaterThan300mm..kml",
+    "status": "real",
+    "note": "Parsed transmission mains into 496 graph trunk edges and trunk_mains.geojson"
+  },
+  {
+    "component": "borewells",
+    "chosen_file": "new_dataset/borewells/BorewellsMaps.kml",
+    "status": "real",
+    "note": "BWSSB / BBMP public borewell inventory"
+  },
+  {
+    "component": "cauvery_coverage",
+    "chosen_file": "new_dataset/supply/ServiceStationDivisionBoundariesMap.kml",
+    "status": "real",
+    "note": "BWSSB piped water service station divisions mapped to ward polygons"
+  },
+  {
+    "component": "tanker_rates",
+    "chosen_file": "new_dataset/tankers/Water Tanker Data (2024).csv",
+    "status": "real",
+    "note": "Citizen water tanker transaction rates and capacities"
+  }
+]

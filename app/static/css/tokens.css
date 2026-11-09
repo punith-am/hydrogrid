@@ -1,0 +1,113 @@
+:root {
+  /* Spacing Scale (4, 8, 12, 16, 24, 32) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* Editorial Light Palette (Calm warm off-white canvas) */
+  --bg: #FAF9F5;
+  --surface: #FFFFFF;
+  --surface-2: #F5F4EE;
+  --surface-3: #ECEAE2;
+  --border: #E8E6DC;
+  --border-subtle: #F0EEE6;
+  --border-strong: #D5D2C7;
+  
+  --text: #1F1E1D;
+  --text-2: #5E5D59;
+  --text-3: #8C8A82;
+  --text-inverse: #FFFFFF;
+  
+  /* Primary Terracotta Accent */
+  --accent: #C15F3C;
+  --accent-ink: #9E4526;
+  --accent-soft: #F4EAE4;
+  --accent-surface: #FDF9F7;
+  --accent-hover: #AF5232;
+  
+  /* Semantic Status Colors */
+  --green: #2B6E44;
+  --green-soft: #E6F3EA;
+  --blue: #235F8E;
+  --blue-soft: #E5F0F8;
+  --amber: #995B10;
+  --amber-soft: #FBF0DF;
+  --red: #C93B2B;
+  --red-soft: #FDECE9;
+  --gray-chip: #5E5D59;
+  --gray-soft: #EFEFEA;
+  
+  /* Chart Colors (Readable on light canvas) */
+  --chart-grid: #ECEAE2;
+  --chart-bg: #FFFFFF;
+  --chart-line: #5E5D59;
+  
+  /* Typography Scale */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+  
+  /* Layout Dimensions */
+  --sidebar-w: 240px;
+  --sidebar-collapsed-w: 64px;
+  --header-h: 56px;
+  --maxw: 1240px;
+  
+  /* Standardized Border Radii */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+  
+  /* Standardized Elevation Shadows */
+  --shadow-1: 0 1px 3px rgba(31, 30, 29, 0.04), 0 1px 2px rgba(31, 30, 29, 0.02);
+  --shadow-2: 0 4px 14px rgba(31, 30, 29, 0.06), 0 1px 3px rgba(31, 30, 29, 0.03);
+  --shadow-3: 0 16px 36px rgba(31, 30, 29, 0.12), 0 4px 12px rgba(31, 30, 29, 0.04);
+  
+  --transition: all 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  /* Dark Editorial Palette */
+  --bg: #141413;
+  --surface: #1C1B1A;
+  --surface-2: #242321;
+  --surface-3: #2C2B28;
+  --border: #2E2D2A;
+  --border-subtle: #242320;
+  --border-strong: #3F3E3A;
+  
+  --text: #EDECE8;
+  --text-2: #9C9A94;
+  --text-3: #7A7872;
+  --text-inverse: #141413;
+  
+  --accent: #D97757;
+  --accent-ink: #F0997B;
+  --accent-soft: #2C1E17;
+  --accent-surface: #201712;
+  --accent-hover: #E38668;
+  
+  --green: #48A76B;
+  --green-soft: #172B1E;
+  --blue: #4FA2E0;
+  --blue-soft: #142738;
+  --amber: #E2963B;
+  --amber-soft: #38240D;
+  --red: #E05D4D;
+  --red-soft: #381B17;
+  --gray-chip: #9C9A94;
+  --gray-soft: #242321;
+  
+  --chart-grid: #282724;
+  --chart-bg: #1C1B1A;
+  --chart-line: #9C9A94;
+  
+  --shadow-1: 0 1px 3px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 4px 14px rgba(0, 0, 0, 0.5);
+  --shadow-3: 0 16px 36px rgba(0, 0, 0, 0.7);
+}

@@ -1,0 +1,1439 @@
+{
+  "new_dataset/borewells/Bengaluru Ground Water Depth 2013.kml": {
+    "file_path": "new_dataset/borewells/Bengaluru Ground Water Depth 2013.kml",
+    "file_name": "Bengaluru Ground Water Depth 2013.kml",
+    "size_bytes": 682792,
+    "size_mb": 0.65,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 1114,
+      "geometry_counts": {
+        "MultiGeometry": 1114,
+        "Point": 1114
+      },
+      "fields": [
+        "Info",
+        "code",
+        "color_hex",
+        "depth_in_m",
+        "mdy",
+        "utmx",
+        "utmy"
+      ],
+      "bounding_box": [
+        77.481742178749,
+        12.8979457357399,
+        77.7086373933442,
+        13.0791900019511
+      ]
+    }
+  },
+  "new_dataset/borewells/BorewellsMaps.kml": {
+    "file_path": "new_dataset/borewells/BorewellsMaps.kml",
+    "file_name": "BorewellsMaps.kml",
+    "size_bytes": 8521768,
+    "size_mb": 8.13,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 7438,
+      "geometry_counts": {
+        "Point": 7438
+      },
+      "fields": [
+        "Borewell_ID",
+        "IndentID",
+        "KGISBorewellID",
+        "KGISValley_SubDivisionID",
+        "KGISVillage110_SubDivisionID",
+        "KGISWTP_PlantID",
+        "OBJECTID",
+        "PipeType",
+        "PumpType",
+        "SSID",
+        "Status",
+        "WorkConditionID",
+        "ZoneID",
+        "created_date",
+        "created_user",
+        "last_edited_date",
+        "last_edited_user"
+      ],
+      "bounding_box": [
+        77.4621064,
+        12.8549606,
+        77.7975338,
+        13.1227174
+      ]
+    }
+  },
+  "new_dataset/population/BBMP 2014 Ward Delimitation Details.csv": {
+    "file_path": "new_dataset/population/BBMP 2014 Ward Delimitation Details.csv",
+    "file_name": "BBMP 2014 Ward Delimitation Details.csv",
+    "size_bytes": 18038,
+    "size_mb": 0.02,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Ward No.",
+        "Ward Name",
+        "Ward Area (in sq.km)",
+        "Total Population",
+        "Male Population",
+        "Female Population",
+        "SC Population",
+        "ST Population",
+        "Assembly constituency",
+        "Parliamentary constituency"
+      ],
+      "row_count": 198,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Ward No.": 1,
+          "Ward Name": "Kempegowda Ward",
+          "Ward Area (in sq.km)": 11.385,
+          "Total Population": 39368,
+          "Male Population": 20580,
+          "Female Population": 18788,
+          "SC Population": 3736,
+          "ST Population": 1231,
+          "Assembly constituency": "150-YELAHANKA",
+          "Parliamentary constituency": "CHIKBALLAPUR"
+        },
+        {
+          "_id": 2,
+          "Ward No.": 2,
+          "Ward Name": "Chowdeswari Ward",
+          "Ward Area (in sq.km)": 9.6905,
+          "Total Population": 47075,
+          "Male Population": 25023,
+          "Female Population": 22052,
+          "SC Population": 5105,
+          "ST Population": 1403,
+          "Assembly constituency": "150-YELAHANKA",
+          "Parliamentary constituency": "CHIKBALLAPUR"
+        }
+      ]
+    }
+  },
+  "new_dataset/rainfall/Bengaluru Daily Temperature Data 1951 to 2024.csv": {
+    "file_path": "new_dataset/rainfall/Bengaluru Daily Temperature Data 1951 to 2024.csv",
+    "file_name": "Bengaluru Daily Temperature Data 1951 to 2024.csv",
+    "size_bytes": 1175071,
+    "size_mb": 1.12,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Date",
+        "Rain",
+        "Temp Max",
+        "Temp Min"
+      ],
+      "row_count": 26835,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Date": "01-01-1951",
+          "Rain": 0,
+          "Temp Max": 26.96999931,
+          "Temp Min": 15.64999962
+        },
+        {
+          "_id": 2,
+          "Date": "02-01-1951",
+          "Rain": 0,
+          "Temp Max": 26.18000031,
+          "Temp Min": 14.68999958
+        }
+      ]
+    }
+  },
+  "new_dataset/rainfall/Bengaluru Monthly Rainfall Data (1900-2025).csv": {
+    "file_path": "new_dataset/rainfall/Bengaluru Monthly Rainfall Data (1900-2025).csv",
+    "file_name": "Bengaluru Monthly Rainfall Data (1900-2025).csv",
+    "size_bytes": 9432,
+    "size_mb": 0.01,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Year",
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "June",
+        "July",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dec",
+        "Total",
+        "El NiNo (Y/N)",
+        "La Nina (Y/N)"
+      ],
+      "row_count": 127,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Year": 1901,
+          "Jan": 0.0,
+          "Feb": 78.9,
+          "Mar": 0,
+          "Apr": 24.3,
+          "May": 146.0,
+          "June": 47.7,
+          "July": 71.6,
+          "Aug": 71.6,
+          "Sept": 318.5,
+          "Oct": 120.3,
+          "Nov": 37.3,
+          "Dec": 23.1,
+          "Total": 939.3,
+          "El NiNo (Y/N)": "Y",
+          "La Nina (Y/N)": "N"
+        },
+        {
+          "_id": 2,
+          "Year": 1902,
+          "Jan": 0.7,
+          "Feb": 0.0,
+          "Mar": 17,
+          "Apr": 58.1,
+          "May": 197.8,
+          "June": 62.2,
+          "July": 32.0,
+          "Aug": 79.5,
+          "Sept": 213.6,
+          "Oct": 219.9,
+          "Nov": 11.1,
+          "Dec": 25.4,
+          "Total": 917.3,
+          "El NiNo (Y/N)": "N",
+          "La Nina (Y/N)": "N"
+        }
+      ]
+    }
+  },
+  "new_dataset/rainfall/Bengaluru Urban Annual Rainfall in All Stations in 2023.csv": {
+    "file_path": "new_dataset/rainfall/Bengaluru Urban Annual Rainfall in All Stations in 2023.csv",
+    "file_name": "Bengaluru Urban Annual Rainfall in All Stations in 2023.csv",
+    "size_bytes": 11109,
+    "size_mb": 0.01,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "District",
+        "Taluk",
+        "Station",
+        "Rainfall (mm)"
+      ],
+      "row_count": 191,
+      "sample_rows": [
+        {
+          "District": "BENGALURU URBAN",
+          "Taluk": "ANEKAL",
+          "Station": "ANEKAL",
+          "Rainfall (mm)": 297.13
+        },
+        {
+          "District": "BENGALURU URBAN",
+          "Taluk": "ANEKAL",
+          "Station": "ATTIBELE",
+          "Rainfall (mm)": 214.5
+        }
+      ]
+    }
+  },
+  "new_dataset/rainfall/Bengaluru Urban Rainfall - 2017.csv": {
+    "file_path": "new_dataset/rainfall/Bengaluru Urban Rainfall - 2017.csv",
+    "file_name": "Bengaluru Urban Rainfall - 2017.csv",
+    "size_bytes": 546,
+    "size_mb": 0.0,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Sl no",
+        "District/Taluk/Hobli",
+        "Annual Normal (mm)",
+        "Annual Actual (mm)",
+        "Annual %Dep",
+        "Pre-Monsoon Normal (mm)",
+        "Pre-Monsoon Actual (mm)",
+        "Pre-Monsoon %Dep",
+        "SWM Normal (mm)",
+        "SWM Actual (mm)",
+        "SWM %Dep",
+        "NEM Normal (mm)",
+        "NEM Actual (mm)",
+        "NEM %Dep"
+      ],
+      "row_count": 5,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Sl no": "",
+          "District/Taluk/Hobli": "BENGALURU URBAN",
+          "Annual Normal (mm)": 855,
+          "Annual Actual (mm)": 1201,
+          "Annual %Dep": 40,
+          "Pre-Monsoon Normal (mm)": 161,
+          "Pre-Monsoon Actual (mm)": 273,
+          "Pre-Monsoon %Dep": 70,
+          "SWM Normal (mm)": 460,
+          "SWM Actual (mm)": 667,
+          "SWM %Dep": 45,
+          "NEM Normal (mm)": 234,
+          "NEM Actual (mm)": 261,
+          "NEM %Dep": 11
+        },
+        {
+          "_id": 2,
+          "Sl no": 1.0,
+          "District/Taluk/Hobli": "Anekal",
+          "Annual Normal (mm)": 860,
+          "Annual Actual (mm)": 1125,
+          "Annual %Dep": 31,
+          "Pre-Monsoon Normal (mm)": 166,
+          "Pre-Monsoon Actual (mm)": 256,
+          "Pre-Monsoon %Dep": 54,
+          "SWM Normal (mm)": 451,
+          "SWM Actual (mm)": 598,
+          "SWM %Dep": 33,
+          "NEM Normal (mm)": 243,
+          "NEM Actual (mm)": 271,
+          "NEM %Dep": 11
+        }
+      ]
+    }
+  },
+  "new_dataset/rainfall/Bengaluru Urban Rainfall - 2018.csv": {
+    "file_path": "new_dataset/rainfall/Bengaluru Urban Rainfall - 2018.csv",
+    "file_name": "Bengaluru Urban Rainfall - 2018.csv",
+    "size_bytes": 549,
+    "size_mb": 0.0,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Sl no",
+        "District/Taluk/Hobli",
+        "Annual Normal (mm)",
+        "Annual Actual (mm)",
+        "Annual %Dep",
+        "Pre-Monsoon Normal (mm)",
+        "Pre-Monsoon Actual (mm)",
+        "Pre-Monsoon %Dep",
+        "SWM Normal (mm)",
+        "SWM Actual (mm)",
+        "SWM %Dep",
+        "NEM Normal (mm)",
+        "NEM Actual (mm)",
+        "NEM %Dep"
+      ],
+      "row_count": 5,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Sl no": "",
+          "District/Taluk/Hobli": "BENGALURU URBAN",
+          "Annual Normal (mm)": 855,
+          "Annual Actual (mm)": 768,
+          "Annual %Dep": -10,
+          "Pre-Monsoon Normal (mm)": 161,
+          "Pre-Monsoon Actual (mm)": 286,
+          "Pre-Monsoon %Dep": 78,
+          "SWM Normal (mm)": 460,
+          "SWM Actual (mm)": 388,
+          "SWM %Dep": -16,
+          "NEM Normal (mm)": 234,
+          "NEM Actual (mm)": 94,
+          "NEM %Dep": -60
+        },
+        {
+          "_id": 2,
+          "Sl no": 1.0,
+          "District/Taluk/Hobli": "Anekal",
+          "Annual Normal (mm)": 860,
+          "Annual Actual (mm)": 709,
+          "Annual %Dep": -18,
+          "Pre-Monsoon Normal (mm)": 166,
+          "Pre-Monsoon Actual (mm)": 278,
+          "Pre-Monsoon %Dep": 67,
+          "SWM Normal (mm)": 451,
+          "SWM Actual (mm)": 334,
+          "SWM %Dep": -26,
+          "NEM Normal (mm)": 243,
+          "NEM Actual (mm)": 98,
+          "NEM %Dep": -60
+        }
+      ]
+    }
+  },
+  "new_dataset/rainfall/Bengaluru Urban Rainfall - 2019.csv": {
+    "file_path": "new_dataset/rainfall/Bengaluru Urban Rainfall - 2019.csv",
+    "file_name": "Bengaluru Urban Rainfall - 2019.csv",
+    "size_bytes": 544,
+    "size_mb": 0.0,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Sl no",
+        "District/Taluk/Hobli",
+        "Annual Normal (mm)",
+        "Annual Actual (mm)",
+        "Annual %Dep",
+        "Pre-Monsoon Normal (mm)",
+        "Pre-Monsoon Actual (mm)",
+        "Pre-Monsoon %Dep",
+        "SWM Normal (mm)",
+        "SWM Actual (mm)",
+        "SWM %Dep",
+        "NEM Normal (mm)",
+        "NEM Actual (mm)",
+        "NEM %Dep"
+      ],
+      "row_count": 5,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Sl no": "",
+          "District/Taluk/Hobli": "BENGALURU URBAN",
+          "Annual Normal (mm)": 855,
+          "Annual Actual (mm)": 830,
+          "Annual %Dep": -3,
+          "Pre-Monsoon Normal (mm)": 161,
+          "Pre-Monsoon Actual (mm)": 182,
+          "Pre-Monsoon %Dep": 13,
+          "SWM Normal (mm)": 460,
+          "SWM Actual (mm)": 383,
+          "SWM %Dep": -17,
+          "NEM Normal (mm)": 234,
+          "NEM Actual (mm)": 265,
+          "NEM %Dep": 13
+        },
+        {
+          "_id": 2,
+          "Sl no": 1.0,
+          "District/Taluk/Hobli": "Anekal",
+          "Annual Normal (mm)": 860,
+          "Annual Actual (mm)": 768,
+          "Annual %Dep": -11,
+          "Pre-Monsoon Normal (mm)": 166,
+          "Pre-Monsoon Actual (mm)": 181,
+          "Pre-Monsoon %Dep": 9,
+          "SWM Normal (mm)": 451,
+          "SWM Actual (mm)": 363,
+          "SWM %Dep": -19,
+          "NEM Normal (mm)": 243,
+          "NEM Actual (mm)": 224,
+          "NEM %Dep": -8
+        }
+      ]
+    }
+  },
+  "new_dataset/rainfall/Bengaluru Urban Rainfall - 2020.csv": {
+    "file_path": "new_dataset/rainfall/Bengaluru Urban Rainfall - 2020.csv",
+    "file_name": "Bengaluru Urban Rainfall - 2020.csv",
+    "size_bytes": 3792,
+    "size_mb": 0.0,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Sl no",
+        "District/Taluk/Hobli",
+        "Annual Normal (mm)",
+        "Annual Actual (mm)",
+        "Annual %Dep",
+        "Pre-Monsoon Normal (mm)",
+        "Pre-Monsoon Actual (mm)",
+        "Pre-Monsoon %Dep",
+        "SWM Normal (mm)",
+        "SWM Actual (mm)",
+        "SWM %Dep",
+        "NEM Normal (mm)",
+        "NEM Actual (mm)",
+        "NEM %Dep"
+      ],
+      "row_count": 55,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Sl no": "",
+          "District/Taluk/Hobli": "BENGALURU URBAN",
+          "Annual Normal (mm)": 846,
+          "Annual Actual (mm)": 1082,
+          "Annual %Dep": 28,
+          "Pre-Monsoon Normal (mm)": 156,
+          "Pre-Monsoon Actual (mm)": 215,
+          "Pre-Monsoon %Dep": 38,
+          "SWM Normal (mm)": 471,
+          "SWM Actual (mm)": 579,
+          "SWM %Dep": 23,
+          "NEM Normal (mm)": 219,
+          "NEM Actual (mm)": 289,
+          "NEM %Dep": 32
+        },
+        {
+          "_id": 2,
+          "Sl no": 1.0,
+          "District/Taluk/Hobli": "Anekal Total",
+          "Annual Normal (mm)": 902,
+          "Annual Actual (mm)": 1040,
+          "Annual %Dep": 15,
+          "Pre-Monsoon Normal (mm)": 180,
+          "Pre-Monsoon Actual (mm)": 209,
+          "Pre-Monsoon %Dep": 16,
+          "SWM Normal (mm)": 477,
+          "SWM Actual (mm)": 508,
+          "SWM %Dep": 6,
+          "NEM Normal (mm)": 244,
+          "NEM Actual (mm)": 323,
+          "NEM %Dep": 32
+        }
+      ]
+    }
+  },
+  "new_dataset/rainfall/Bengaluru Urban Rainfall - 2021.csv": {
+    "file_path": "new_dataset/rainfall/Bengaluru Urban Rainfall - 2021.csv",
+    "file_name": "Bengaluru Urban Rainfall - 2021.csv",
+    "size_bytes": 3851,
+    "size_mb": 0.0,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Sl no",
+        "District/Taluk/Hobli",
+        "Annual Normal (mm)",
+        "Annual Actual (mm)",
+        "Annual %Dep",
+        "Pre-Monsoon Normal (mm)",
+        "Pre-Monsoon Actual (mm)",
+        "Pre-Monsoon %Dep",
+        "SWM Normal (mm)",
+        "SWM Actual (mm)",
+        "SWM %Dep",
+        "NEM Normal (mm)",
+        "NEM Actual (mm)",
+        "NEM %Dep"
+      ],
+      "row_count": 55,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Sl no": "",
+          "District/Taluk/Hobli": "BENGALURU URBAN",
+          "Annual Normal (mm)": 846,
+          "Annual Actual (mm)": 1082,
+          "Annual %Dep": 33,
+          "Pre-Monsoon Normal (mm)": 156,
+          "Pre-Monsoon Actual (mm)": 169,
+          "Pre-Monsoon %Dep": 8,
+          "SWM Normal (mm)": 471,
+          "SWM Actual (mm)": 468,
+          "SWM %Dep": 0,
+          "NEM Normal (mm)": 219,
+          "NEM Actual (mm)": 491,
+          "NEM %Dep": 124
+        },
+        {
+          "_id": 2,
+          "Sl no": 1.0,
+          "District/Taluk/Hobli": "Anekal Total",
+          "Annual Normal (mm)": 902,
+          "Annual Actual (mm)": 1036,
+          "Annual %Dep": 15,
+          "Pre-Monsoon Normal (mm)": 180,
+          "Pre-Monsoon Actual (mm)": 161,
+          "Pre-Monsoon %Dep": -11,
+          "SWM Normal (mm)": 477,
+          "SWM Actual (mm)": 458,
+          "SWM %Dep": -4,
+          "NEM Normal (mm)": 244,
+          "NEM Actual (mm)": 417,
+          "NEM %Dep": 71
+        }
+      ]
+    }
+  },
+  "new_dataset/rainfall/Bengaluru Urban Rainfall - 2022.csv": {
+    "file_path": "new_dataset/rainfall/Bengaluru Urban Rainfall - 2022.csv",
+    "file_name": "Bengaluru Urban Rainfall - 2022.csv",
+    "size_bytes": 3247,
+    "size_mb": 0.0,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "Sl no",
+        "District/Taluk/Hobli",
+        "Annual Normal (mm)",
+        "Annual Actual (mm)",
+        "Annual %Dep",
+        "Pre-Monsoon Normal (mm)",
+        "Pre-Monsoon Actual (mm)",
+        "Pre-Monsoon %Dep",
+        "SWM Normal (mm)",
+        "SWM Actual (mm)",
+        "SWM %Dep",
+        "NEM Normal (mm)",
+        "NEM Actual (mm)",
+        "NEM %Dep"
+      ],
+      "row_count": 47,
+      "sample_rows": [
+        {
+          "Sl no": "",
+          "District/Taluk/Hobli": "BENGALURU URBAN ",
+          "Annual Normal (mm)": 846,
+          "Annual Actual (mm)": 1456,
+          "Annual %Dep": 72,
+          "Pre-Monsoon Normal (mm)": 156,
+          "Pre-Monsoon Actual (mm)": 326,
+          "Pre-Monsoon %Dep": 109,
+          "SWM Normal (mm)": 471,
+          "SWM Actual (mm)": 790,
+          "SWM %Dep": 68,
+          "NEM Normal (mm)": 219,
+          "NEM Actual (mm)": 340,
+          "NEM %Dep": 56
+        },
+        {
+          "Sl no": 1.0,
+          "District/Taluk/Hobli": "Anekal Total",
+          "Annual Normal (mm)": 902,
+          "Annual Actual (mm)": 1427,
+          "Annual %Dep": 58,
+          "Pre-Monsoon Normal (mm)": 180,
+          "Pre-Monsoon Actual (mm)": 307,
+          "Pre-Monsoon %Dep": 70,
+          "SWM Normal (mm)": 477,
+          "SWM Actual (mm)": 761,
+          "SWM %Dep": 59,
+          "NEM Normal (mm)": 244,
+          "NEM Actual (mm)": 359,
+          "NEM %Dep": 47
+        }
+      ]
+    }
+  },
+  "new_dataset/rainfall/Bengaluru Urban Rainfall - 2024.csv": {
+    "file_path": "new_dataset/rainfall/Bengaluru Urban Rainfall - 2024.csv",
+    "file_name": "Bengaluru Urban Rainfall - 2024.csv",
+    "size_bytes": 4661,
+    "size_mb": 0.0,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "District/Taluk/Hobli",
+        "Category",
+        "Annual Normal",
+        "Annual Actual",
+        "Annual Departure (%)",
+        "Pre-Monsoon Normal",
+        "Pre-Monsoon Actual",
+        "Pre-Monsoon Departure (%)",
+        "SW Monsoon Normal",
+        "SWM Actual",
+        "SWM Departure (%)",
+        "NE Monsoon Normal",
+        "NEM Actual",
+        "NEM Departure (%)"
+      ],
+      "row_count": 55,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "District/Taluk/Hobli": "BENGALURU URBAN",
+          "Category": "District",
+          "Annual Normal": 845.6,
+          "Annual Actual": 933.8,
+          "Annual Departure (%)": 10,
+          "Pre-Monsoon Normal": 156.2,
+          "Pre-Monsoon Actual": 151.4,
+          "Pre-Monsoon Departure (%)": -3,
+          "SW Monsoon Normal": 470.6,
+          "SWM Actual": 418,
+          "SWM Departure (%)": -11,
+          "NE Monsoon Normal": 218.8,
+          "NEM Actual": 364.5,
+          "NEM Departure (%)": 67
+        },
+        {
+          "_id": 2,
+          "District/Taluk/Hobli": "Anekal",
+          "Category": "Taluk",
+          "Annual Normal": 901.6,
+          "Annual Actual": 933.8,
+          "Annual Departure (%)": 4,
+          "Pre-Monsoon Normal": 180.0,
+          "Pre-Monsoon Actual": 129.3,
+          "Pre-Monsoon Departure (%)": -28,
+          "SW Monsoon Normal": 477.3,
+          "SWM Actual": 411,
+          "SWM Departure (%)": -14,
+          "NE Monsoon Normal": 244.3,
+          "NEM Actual": 393.6,
+          "NEM Departure (%)": 61
+        }
+      ]
+    }
+  },
+  "new_dataset/rainfall/Bengaluru Urban Rainfall 2023.csv": {
+    "file_path": "new_dataset/rainfall/Bengaluru Urban Rainfall 2023.csv",
+    "file_name": "Bengaluru Urban Rainfall 2023.csv",
+    "size_bytes": 4027,
+    "size_mb": 0.0,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "District/Taluk/Hobli",
+        "Category",
+        "Annual Normal",
+        "Annual Actual",
+        "Annual Departure (%)",
+        "Pre-Monsoon Normal",
+        "Pre-Monsoon Actual",
+        "Pre-Monsoon Departure (%)",
+        "SW Monsoon Normal",
+        "SWM Actual",
+        "SWM Departure (%)",
+        "NE Monsoon Normal",
+        "NEM Actual",
+        "NEM Departure (%)"
+      ],
+      "row_count": 55,
+      "sample_rows": [
+        {
+          "District/Taluk/Hobli": "BENGALURU URBAN",
+          "Category": "District",
+          "Annual Normal": 846,
+          "Annual Actual": 689,
+          "Annual Departure (%)": -19,
+          "Pre-Monsoon Normal": 156.1,
+          "Pre-Monsoon Actual": 212.6,
+          "Pre-Monsoon Departure (%)": 36,
+          "SW Monsoon Normal": 471,
+          "SWM Actual": 324,
+          "SWM Departure (%)": -32,
+          "NE Monsoon Normal": 219,
+          "NEM Actual": 156,
+          "NEM Departure (%)": -28
+        },
+        {
+          "District/Taluk/Hobli": "Anekal",
+          "Category": "Taluk",
+          "Annual Normal": 902,
+          "Annual Actual": 640,
+          "Annual Departure (%)": -29,
+          "Pre-Monsoon Normal": 180.0,
+          "Pre-Monsoon Actual": 224.2,
+          "Pre-Monsoon Departure (%)": 25,
+          "SW Monsoon Normal": 477,
+          "SWM Actual": 269,
+          "SWM Departure (%)": -44,
+          "NE Monsoon Normal": 244,
+          "NEM Actual": 146,
+          "NEM Departure (%)": -40
+        }
+      ]
+    }
+  },
+  "new_dataset/supply/CauveryWaterSupply.csv": {
+    "file_path": "new_dataset/supply/CauveryWaterSupply.csv",
+    "file_name": "CauveryWaterSupply.csv",
+    "size_bytes": 28092,
+    "size_mb": 0.03,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Cauvery Stage 1",
+        "Stage 2",
+        "Stage 3",
+        "Stage 4 Ph 1",
+        "Stage 4 Phase 2"
+      ],
+      "row_count": 627,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Cauvery Stage 1": "Nethajinagar",
+          "Stage 2": "NTY Layout",
+          "Stage 3": "Gandhinagar",
+          "Stage 4 Ph 1": "Mahalakshmi Layout",
+          "Stage 4 Phase 2": "4th Block Nandini Layout"
+        },
+        {
+          "_id": 2,
+          "Cauvery Stage 1": "Nagamma Nagar",
+          "Stage 2": "Telecom Layout",
+          "Stage 3": "Laxmanpuri Slum",
+          "Stage 4 Ph 1": "J C Nagar 1st Main road to 12th Main",
+          "Stage 4 Phase 2": "BHEL Layout"
+        }
+      ]
+    }
+  },
+  "new_dataset/supply/DivisionBoundaryMap.kml": {
+    "file_path": "new_dataset/supply/DivisionBoundaryMap.kml",
+    "file_name": "DivisionBoundaryMap.kml",
+    "size_bytes": 714801,
+    "size_mb": 0.68,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 16,
+      "geometry_counts": {
+        "MultiGeometry": 8,
+        "Polygon": 31
+      },
+      "fields": [
+        "DivisionCode",
+        "DivisionName",
+        "KGISDivisionID",
+        "OBJECTID",
+        "SHAPE_STArea__",
+        "SHAPE_STLength__"
+      ],
+      "bounding_box": [
+        77.4641855,
+        12.8037578,
+        77.776186,
+        13.1381439
+      ]
+    }
+  },
+  "new_dataset/supply/LocationOfWaterSupplyValvesInBWSSBarea.kml": {
+    "file_path": "new_dataset/supply/LocationOfWaterSupplyValvesInBWSSBarea.kml",
+    "file_name": "LocationOfWaterSupplyValvesInBWSSBarea.kml",
+    "size_bytes": 32525096,
+    "size_mb": 31.02,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 48982,
+      "geometry_counts": {
+        "Point": 48982
+      },
+      "fields": [
+        "Diameter",
+        "KGISValveID",
+        "KGISVillage110_SubDivisionID",
+        "MaterialID",
+        "OBJECTID",
+        "SSID",
+        "Status",
+        "TypeID",
+        "ValveID",
+        "WorkConditionID",
+        "last_edited_date"
+      ],
+      "bounding_box": [
+        77.4622572,
+        12.8347637,
+        77.7700018,
+        13.134083
+      ]
+    }
+  },
+  "new_dataset/supply/MapBWSSBwaterSupplyLinesDiameterGreaterThan300mm..kml": {
+    "file_path": "new_dataset/supply/MapBWSSBwaterSupplyLinesDiameterGreaterThan300mm..kml",
+    "file_name": "MapBWSSBwaterSupplyLinesDiameterGreaterThan300mm..kml",
+    "size_bytes": 2271440,
+    "size_mb": 2.17,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 2865,
+      "geometry_counts": {
+        "LineString": 6686,
+        "MultiGeometry": 965
+      },
+      "fields": [],
+      "bounding_box": [
+        77.47301762804663,
+        12.84133850700444,
+        77.77284769271637,
+        13.14221914937194
+      ]
+    }
+  },
+  "new_dataset/supply/MapBWSSBwaterSupplyLinesDiameterLesshanOrequal300mm..kml": {
+    "file_path": "new_dataset/supply/MapBWSSBwaterSupplyLinesDiameterLesshanOrequal300mm..kml",
+    "file_name": "MapBWSSBwaterSupplyLinesDiameterLesshanOrequal300mm..kml",
+    "size_bytes": 41099984,
+    "size_mb": 39.2,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 97827,
+      "geometry_counts": {
+        "LineString": 140361,
+        "MultiGeometry": 17749
+      },
+      "fields": [],
+      "bounding_box": [
+        77.4616228239627,
+        12.82463998307549,
+        77.77281470430329,
+        13.13413548338715
+      ]
+    }
+  },
+  "new_dataset/supply/PumpingStationsMap.kml": {
+    "file_path": "new_dataset/supply/PumpingStationsMap.kml",
+    "file_name": "PumpingStationsMap.kml",
+    "size_bytes": 37726,
+    "size_mb": 0.04,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 30,
+      "geometry_counts": {
+        "Point": 30
+      },
+      "fields": [
+        "Capacity",
+        "IndentID",
+        "Inlet",
+        "KGISPumpStationID",
+        "KGISValley_SubDivisionID",
+        "KGISVillage110_SubDivisionID",
+        "OBJECTID",
+        "Outlet",
+        "PumpStationID",
+        "SSID",
+        "Status",
+        "WorkConditionID",
+        "ZoneID",
+        "created_date",
+        "created_user",
+        "last_edited_date",
+        "last_edited_user"
+      ],
+      "bounding_box": [
+        77.4887892,
+        12.9139632,
+        77.6499754,
+        13.1013907
+      ]
+    }
+  },
+  "new_dataset/supply/ServiceStationDivisionBoundariesMap.kml": {
+    "file_path": "new_dataset/supply/ServiceStationDivisionBoundariesMap.kml",
+    "file_name": "ServiceStationDivisionBoundariesMap.kml",
+    "size_bytes": 1672573,
+    "size_mb": 1.6,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 143,
+      "geometry_counts": {
+        "Polygon": 158,
+        "MultiGeometry": 9
+      },
+      "fields": [
+        "KGISService_StationID",
+        "KGISSub_DivisionID",
+        "OBJECTID",
+        "SHAPE_STArea__",
+        "SHAPE_STLength__",
+        "SSID",
+        "Service_StationCode",
+        "Service_StationName"
+      ],
+      "bounding_box": [
+        77.4629295,
+        12.8037578,
+        77.7813975,
+        13.1421089
+      ]
+    }
+  },
+  "new_dataset/supply/SewageTreatmentPlantLocation.csv": {
+    "file_path": "new_dataset/supply/SewageTreatmentPlantLocation.csv",
+    "file_name": "SewageTreatmentPlantLocation.csv",
+    "size_bytes": 3235,
+    "size_mb": 0.0,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "STPId",
+        "STPName",
+        "Latitude",
+        "Longitude",
+        "PlantType",
+        "TreatmentCapacity (KLD)",
+        "Status"
+      ],
+      "row_count": 39,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "STPId": 9,
+          "STPName": "Hebbal  60MLD",
+          "Latitude": 12.940545,
+          "Longitude": 77.654822,
+          "PlantType": "Sewage Treatment Plant",
+          "TreatmentCapacity (KLD)": 60000,
+          "Status": true
+        },
+        {
+          "_id": 2,
+          "STPId": 10,
+          "STPName": "Horamavu  Agara 20 MLD",
+          "Latitude": 13.0471,
+          "Longitude": 77.662156,
+          "PlantType": "Sewage Treatment Plant",
+          "TreatmentCapacity (KLD)": 20000,
+          "Status": true
+        }
+      ]
+    }
+  },
+  "new_dataset/supply/SubDivisionBoundaryMaps.kml": {
+    "file_path": "new_dataset/supply/SubDivisionBoundaryMaps.kml",
+    "file_name": "SubDivisionBoundaryMaps.kml",
+    "size_bytes": 1027189,
+    "size_mb": 0.98,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 43,
+      "geometry_counts": {
+        "Polygon": 58,
+        "MultiGeometry": 7
+      },
+      "fields": [
+        "KGISDivisionID",
+        "KGISSub_DivisionID",
+        "OBJECTID",
+        "SHAPE_STArea__",
+        "SHAPE_STLength__",
+        "Sub_DivisionCode",
+        "Sub_DivisionName"
+      ],
+      "bounding_box": [
+        77.4602768,
+        12.8037578,
+        77.7813975,
+        13.1421027
+      ]
+    }
+  },
+  "new_dataset/tankers/Water Tanker Data (2019).csv": {
+    "file_path": "new_dataset/tankers/Water Tanker Data (2019).csv",
+    "file_name": "Water Tanker Data (2019).csv",
+    "size_bytes": 40451,
+    "size_mb": 0.04,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Type",
+        "No of units",
+        "Apartment Name / House Address",
+        "Monthly expense on water",
+        "Do you have water rationing?",
+        "How many dry days  recently?",
+        "Source of water (Select multiple if required)",
+        "How often do you buy water",
+        "No of tankers",
+        "Tanker capacity (in litres)",
+        "Average tanker price",
+        "Do you use treated STP water for flushing/gardening?"
+      ],
+      "row_count": 567,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Type": "Apartment",
+          "No of units": 12.0,
+          "Apartment Name / House Address": "Electronics City Phase 1",
+          "Monthly expense on water": 19000,
+          "Do you have water rationing?": "",
+          "How many dry days  recently?": "",
+          "Source of water (Select multiple if required)": "Tanker Water",
+          "How often do you buy water": 1.0,
+          "No of tankers": 1.0,
+          "Tanker capacity (in litres)": 6500.0,
+          "Average tanker price": 650.0,
+          "Do you use treated STP water for flushing/gardening?": "No"
+        },
+        {
+          "_id": 2,
+          "Type": "Independent House",
+          "No of units": "",
+          "Apartment Name / House Address": "3694, 9th cross, 13th Main, Doopanahalli, Indiranagar",
+          "Monthly expense on water": 300,
+          "Do you have water rationing?": "",
+          "How many dry days  recently?": "",
+          "Source of water (Select multiple if required)": "BWSSB",
+          "How often do you buy water": "",
+          "No of tankers": "",
+          "Tanker capacity (in litres)": "",
+          "Average tanker price": "",
+          "Do you use treated STP water for flushing/gardening?": ""
+        }
+      ]
+    }
+  },
+  "new_dataset/tankers/Water Tanker Data (2024).csv": {
+    "file_path": "new_dataset/tankers/Water Tanker Data (2024).csv",
+    "file_name": "Water Tanker Data (2024).csv",
+    "size_bytes": 26736,
+    "size_mb": 0.03,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Sources of water supply for your community",
+        "If you don't get water from tankers, what do you rely on for wa",
+        "How much do you pay for a single tanker of water?",
+        "What is the capacity of the tanker in litres?",
+        "Your area Pincode",
+        "Type of Community",
+        "Frequency of purchase of private water tanker",
+        "How many private tankers do you get per month on average?",
+        "Number of units in the community",
+        "Do you have water rationing?",
+        "Do you use treated STP water for flushing/gardening?",
+        "What is your community's monthly expense on water?",
+        "Number of dry days in the past year?",
+        "Have you been ordering private water tankers more often in the",
+        "Has the supply of water from BWSSB changed during the last one",
+        "How much were you paying for the same tanker of water a year ba",
+        "How often does your water tanker vendor raise rates?"
+      ],
+      "row_count": 160,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Sources of water supply for your community": "BWSSB/Municipal/Cauvery Water, Borewell",
+          "If you don't get water from tankers, what do you rely on for wa": "",
+          "How much do you pay for a single tanker of water?": 1500,
+          "What is the capacity of the tanker in litres?": 6000,
+          "Your area Pincode": 560005,
+          "Type of Community": "Apartments",
+          "Frequency of purchase of private water tanker": "Only for Emergency",
+          "How many private tankers do you get per month on average?": 1,
+          "Number of units in the community": 120,
+          "Do you have water rationing?": "No",
+          "Do you use treated STP water for flushing/gardening?": "",
+          "What is your community's monthly expense on water?": 75000,
+          "Number of dry days in the past year?": 20,
+          "Have you been ordering private water tankers more often in the": "Not ordered private tankers in last 3 months",
+          "Has the supply of water from BWSSB changed during the last one": "No change",
+          "How much were you paying for the same tanker of water a year ba": "",
+          "How often does your water tanker vendor raise rates?": "Annually"
+        },
+        {
+          "_id": 2,
+          "Sources of water supply for your community": "Private water tankers, Borewell",
+          "If you don't get water from tankers, what do you rely on for wa": "",
+          "How much do you pay for a single tanker of water?": 1000,
+          "What is the capacity of the tanker in litres?": 5000,
+          "Your area Pincode": 560016,
+          "Type of Community": "Apartments",
+          "Frequency of purchase of private water tanker": "Daily",
+          "How many private tankers do you get per month on average?": 90,
+          "Number of units in the community": 30,
+          "Do you have water rationing?": "No",
+          "Do you use treated STP water for flushing/gardening?": "",
+          "What is your community's monthly expense on water?": 70000,
+          "Number of dry days in the past year?": 0,
+          "Have you been ordering private water tankers more often in the": "More often",
+          "Has the supply of water from BWSSB changed during the last one": "NA - No BWSSB supply",
+          "How much were you paying for the same tanker of water a year ba": 350.0,
+          "How often does your water tanker vendor raise rates?": "Every quarter"
+        }
+      ]
+    }
+  },
+  "new_dataset/wards/BBMP Final Wards Map - 2023.kml": {
+    "file_path": "new_dataset/wards/BBMP Final Wards Map - 2023.kml",
+    "file_name": "BBMP Final Wards Map - 2023.kml",
+    "size_bytes": 2565106,
+    "size_mb": 2.45,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 225,
+      "geometry_counts": {
+        "MultiGeometry": 225,
+        "Polygon": 231
+      },
+      "fields": [
+        "assembly_constituency_id",
+        "assembly_constituency_name_en",
+        "assembly_constituency_name_ka",
+        "bbox",
+        "female_population",
+        "id",
+        "male_population",
+        "name_en",
+        "name_ka",
+        "parliamentary_constituency_id",
+        "parliamentary_constituency_name_en",
+        "parliamentary_constituency_name_ka",
+        "population",
+        "proposed_ward_name_en",
+        "proposed_ward_name_ka",
+        "sc_population",
+        "st_population",
+        "ward_area"
+      ],
+      "bounding_box": [
+        77.4601281702908,
+        12.835054610559,
+        77.780535112067,
+        13.1426598294131
+      ]
+    }
+  },
+  "new_dataset/wards/BBMP Proposed Wards 2023.kml": {
+    "file_path": "new_dataset/wards/BBMP Proposed Wards 2023.kml",
+    "file_name": "BBMP Proposed Wards 2023.kml",
+    "size_bytes": 2702950,
+    "size_mb": 2.58,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 225,
+      "geometry_counts": {
+        "MultiGeometry": 225,
+        "Polygon": 231
+      },
+      "fields": [
+        "assembly_constituency_id",
+        "assembly_constituency_name_en",
+        "assembly_constituency_name_ka",
+        "bbox",
+        "female_population",
+        "id",
+        "male_population",
+        "name_en",
+        "name_ka",
+        "parliamentary_constituency_id",
+        "parliamentary_constituency_name_en",
+        "parliamentary_constituency_name_ka",
+        "population",
+        "proposed_ward_name_en",
+        "proposed_ward_name_ka",
+        "sc_population",
+        "st_population",
+        "ward_area"
+      ],
+      "bounding_box": [
+        77.4601281702908,
+        12.8378884904013,
+        77.7776844218809,
+        13.1421152232088
+      ]
+    }
+  },
+  "new_dataset/wards/BBMP Ward Area and Road Length.csv": {
+    "file_path": "new_dataset/wards/BBMP Ward Area and Road Length.csv",
+    "file_name": "BBMP Ward Area and Road Length.csv",
+    "size_bytes": 5620,
+    "size_mb": 0.01,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Ward_No",
+        "Ward Name",
+        "Area (sq km)",
+        "Road length (kms)"
+      ],
+      "row_count": 199,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Ward_No": 1,
+          "Ward Name": "Kempegowda Ward",
+          "Area (sq km)": 10.9,
+          "Road length (kms)": 86
+        },
+        {
+          "_id": 2,
+          "Ward_No": 2,
+          "Ward Name": "Chowdeswari Ward",
+          "Area (sq km)": 6.5,
+          "Road length (kms)": 72
+        }
+      ]
+    }
+  },
+  "new_dataset/wards/BBMP Ward Information.csv": {
+    "file_path": "new_dataset/wards/BBMP Ward Information.csv",
+    "file_name": "BBMP Ward Information.csv",
+    "size_bytes": 17159,
+    "size_mb": 0.02,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "Ward No",
+        "Ward Name",
+        "BBMP Zone Name",
+        "BBMP Division",
+        "BBMP Sub Division",
+        "Assembly constituency",
+        "MP Constituency"
+      ],
+      "row_count": 198,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "Ward No": 1,
+          "Ward Name": "Kempegowda Ward",
+          "BBMP Zone Name": "Yelahanka",
+          "BBMP Division": "Yelahanka",
+          "BBMP Sub Division": "Yelahanka",
+          "Assembly constituency": "Yelahanka",
+          "MP Constituency": "Chikballapur"
+        },
+        {
+          "_id": 2,
+          "Ward No": 2,
+          "Ward Name": "Chowdeswari Ward",
+          "BBMP Zone Name": "Yelahanka",
+          "BBMP Division": "Yelahanka",
+          "BBMP Sub Division": "Yelahanka",
+          "Assembly constituency": "Yelahanka",
+          "MP Constituency": "Chikballapur"
+        }
+      ]
+    }
+  },
+  "new_dataset/wards/BBMP Ward Map - 2022.kml": {
+    "file_path": "new_dataset/wards/BBMP Ward Map - 2022.kml",
+    "file_name": "BBMP Ward Map - 2022.kml",
+    "size_bytes": 2093582,
+    "size_mb": 2.0,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 243,
+      "geometry_counts": {
+        "Polygon": 246,
+        "MultiGeometry": 1
+      },
+      "fields": [
+        "LGD_WardCode",
+        "OBJECTID",
+        "TownCode",
+        "WardCode",
+        "WardID",
+        "WardName",
+        "WardNo",
+        "fid"
+      ],
+      "bounding_box": [
+        77.4598797,
+        12.8345839,
+        77.7832625,
+        13.1424175
+      ]
+    }
+  },
+  "new_dataset/wards/BBMP Zone Boundaries - 2022.kml": {
+    "file_path": "new_dataset/wards/BBMP Zone Boundaries - 2022.kml",
+    "file_name": "BBMP Zone Boundaries - 2022.kml",
+    "size_bytes": 351558,
+    "size_mb": 0.34,
+    "extension": ".kml",
+    "type": "kml",
+    "content": {
+      "placemark_count": 8,
+      "geometry_counts": {
+        "MultiGeometry": 3,
+        "Polygon": 11
+      },
+      "fields": [
+        "FID",
+        "Zone"
+      ],
+      "bounding_box": [
+        77.4606848,
+        12.8417326,
+        77.7756498,
+        13.1381076
+      ]
+    }
+  },
+  "new_dataset/wards/Constituencies to Wards Mapping for Old and New Wards.csv": {
+    "file_path": "new_dataset/wards/Constituencies to Wards Mapping for Old and New Wards.csv",
+    "file_name": "Constituencies to Wards Mapping for Old and New Wards.csv",
+    "size_bytes": 17348,
+    "size_mb": 0.02,
+    "extension": ".csv",
+    "type": "csv",
+    "content": {
+      "columns": [
+        "_id",
+        "AC num",
+        "AC Name",
+        "Parliamentary Constituency Name",
+        "Old Ward Num",
+        "Old Ward Name",
+        "New Ward Num",
+        "New Ward Name"
+      ],
+      "row_count": 245,
+      "sample_rows": [
+        {
+          "_id": 1,
+          "AC num": 150,
+          "AC Name": "Yelahanka",
+          "Parliamentary Constituency Name": "Chikballapur",
+          "Old Ward Num": 1,
+          "Old Ward Name": "Kempegowda Ward",
+          "New Ward Num": 1,
+          "New Ward Name": "Kempegowda Ward"
+        },
+        {
+          "_id": 2,
+          "AC num": 150,
+          "AC Name": "Yelahanka",
+          "Parliamentary Constituency Name": "Chikballapur",
+          "Old Ward Num": 2,
+          "Old Ward Name": "Chowdeswari Ward",
+          "New Ward Num": 2,
+          "New Ward Name": "Chowdeswari Ward"
+        }
+      ]
+    }
+  }
+}

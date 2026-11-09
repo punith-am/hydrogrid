@@ -1,0 +1,662 @@
+{
+  "96": {
+    "ward_name": "Ward_097_Kadugodi",
+    "shortfall_upper_mld": 4.76,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 13.0,
+        "stp_mld": 0.01,
+        "tanker_contract_mld": 2.634,
+        "normalized_distance": 0.372,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 13.0%; contract 2.63 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.4,
+        "stp_mld": 1.034,
+        "tanker_contract_mld": 3.715,
+        "normalized_distance": 0.514,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 1.03 MLD decentralized STP reuse; contract 3.71 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 28.9,
+        "stp_mld": 0.555,
+        "tanker_contract_mld": 0.006,
+        "normalized_distance": 0.511,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 28.9%; dispatch 0.56 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "91": {
+    "ward_name": "Ward_092_Basavanapura",
+    "shortfall_upper_mld": 3.66,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 0.3,
+        "stp_mld": 0.005,
+        "tanker_contract_mld": 3.413,
+        "normalized_distance": 0.265,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: contract 3.41 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.1,
+        "stp_mld": 0.744,
+        "tanker_contract_mld": 2.844,
+        "normalized_distance": 0.387,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.74 MLD decentralized STP reuse; contract 2.84 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 20.3,
+        "stp_mld": 0.553,
+        "tanker_contract_mld": 0.001,
+        "normalized_distance": 0.396,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 20.3%; dispatch 0.55 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "192": {
+    "ward_name": "Ward_193_Padmanabha_Nagar",
+    "shortfall_upper_mld": 3.42,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 3.0,
+        "stp_mld": 0.033,
+        "tanker_contract_mld": 2.755,
+        "normalized_distance": 0.273,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 3.0%; contract 2.75 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 1.101,
+        "tanker_contract_mld": 3.222,
+        "normalized_distance": 0.531,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 1.10 MLD decentralized STP reuse; contract 3.22 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 29.7,
+        "stp_mld": 0.358,
+        "tanker_contract_mld": 0.0,
+        "normalized_distance": 0.484,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 29.7%; dispatch 0.36 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "14": {
+    "ward_name": "Ward_015_Kammagondanahalli",
+    "shortfall_upper_mld": 3.41,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 4.3,
+        "stp_mld": 0.034,
+        "tanker_contract_mld": 2.639,
+        "normalized_distance": 0.262,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 4.3%; contract 2.64 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.1,
+        "stp_mld": 0.884,
+        "tanker_contract_mld": 2.883,
+        "normalized_distance": 0.415,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.88 MLD decentralized STP reuse; contract 2.88 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 25.0,
+        "stp_mld": 0.637,
+        "tanker_contract_mld": 0.001,
+        "normalized_distance": 0.477,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 25.0%; dispatch 0.64 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "97": {
+    "ward_name": "Ward_098_Hudi",
+    "shortfall_upper_mld": 3.39,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 2.9,
+        "stp_mld": 0.065,
+        "tanker_contract_mld": 2.921,
+        "normalized_distance": 0.305,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 2.9%; dispatch 0.06 MLD decentralized STP reuse; contract 2.92 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 0.919,
+        "tanker_contract_mld": 2.494,
+        "normalized_distance": 0.451,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.92 MLD decentralized STP reuse; contract 2.49 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 22.7,
+        "stp_mld": 0.536,
+        "tanker_contract_mld": 0.004,
+        "normalized_distance": 0.441,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 22.7%; dispatch 0.54 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "100": {
+    "ward_name": "Ward_101_Dodda_Nekkundi",
+    "shortfall_upper_mld": 3.37,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 1.9,
+        "stp_mld": 0.004,
+        "tanker_contract_mld": 2.954,
+        "normalized_distance": 0.29,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 1.9%; contract 2.95 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 1.048,
+        "tanker_contract_mld": 2.272,
+        "normalized_distance": 0.483,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 1.05 MLD decentralized STP reuse; contract 2.27 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 27.5,
+        "stp_mld": 0.105,
+        "tanker_contract_mld": 0.0,
+        "normalized_distance": 0.395,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 27.5%; dispatch 0.10 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "201": {
+    "ward_name": "Ward_202_Uttarahalli",
+    "shortfall_upper_mld": 3.04,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 3.6,
+        "stp_mld": 0.007,
+        "tanker_contract_mld": 2.466,
+        "normalized_distance": 0.251,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 3.6%; contract 2.47 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 1.109,
+        "tanker_contract_mld": 2.888,
+        "normalized_distance": 0.507,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 1.11 MLD decentralized STP reuse; contract 2.89 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 28.6,
+        "stp_mld": 0.484,
+        "tanker_contract_mld": 0.003,
+        "normalized_distance": 0.501,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 28.6%; dispatch 0.48 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "101": {
+    "ward_name": "Ward_102_AECS_Layout",
+    "shortfall_upper_mld": 2.95,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 4.5,
+        "stp_mld": 0.054,
+        "tanker_contract_mld": 2.239,
+        "normalized_distance": 0.274,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 4.5%; dispatch 0.05 MLD decentralized STP reuse; contract 2.24 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 0.663,
+        "tanker_contract_mld": 2.623,
+        "normalized_distance": 0.412,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.66 MLD decentralized STP reuse; contract 2.62 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 29.4,
+        "stp_mld": 0.94,
+        "tanker_contract_mld": 0.002,
+        "normalized_distance": 0.644,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 29.4%; dispatch 0.94 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "193": {
+    "ward_name": "Ward_194_Chikkalsandra",
+    "shortfall_upper_mld": 2.85,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 1.5,
+        "stp_mld": 0.026,
+        "tanker_contract_mld": 2.448,
+        "normalized_distance": 0.221,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 1.5%; contract 2.45 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 1.102,
+        "tanker_contract_mld": 1.62,
+        "normalized_distance": 0.392,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 1.10 MLD decentralized STP reuse; contract 1.62 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 19.5,
+        "stp_mld": 1.197,
+        "tanker_contract_mld": 0.001,
+        "normalized_distance": 0.546,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 19.5%; dispatch 1.20 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "102": {
+    "ward_name": "Ward_103_White_Field",
+    "shortfall_upper_mld": 2.84,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 7.6,
+        "stp_mld": 0.033,
+        "tanker_contract_mld": 1.522,
+        "normalized_distance": 0.228,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 7.6%; contract 1.52 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 0.848,
+        "tanker_contract_mld": 3.372,
+        "normalized_distance": 0.465,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.85 MLD decentralized STP reuse; contract 3.37 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 24.8,
+        "stp_mld": 1.2,
+        "tanker_contract_mld": 0.002,
+        "normalized_distance": 0.614,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 24.8%; dispatch 1.20 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "0": {
+    "ward_name": "Ward_001_Kempegowda_Ward",
+    "shortfall_upper_mld": 2.82,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 1.5,
+        "stp_mld": 0.005,
+        "tanker_contract_mld": 2.376,
+        "normalized_distance": 0.199,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 1.5%; contract 2.38 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 1.101,
+        "tanker_contract_mld": 2.217,
+        "normalized_distance": 0.413,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 1.10 MLD decentralized STP reuse; contract 2.22 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 23.5,
+        "stp_mld": 0.242,
+        "tanker_contract_mld": 0.001,
+        "normalized_distance": 0.368,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 23.5%; dispatch 0.24 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "90": {
+    "ward_name": "Ward_091_K_R_Puram",
+    "shortfall_upper_mld": 2.74,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 0.3,
+        "stp_mld": 0.035,
+        "tanker_contract_mld": 2.59,
+        "normalized_distance": 0.212,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: contract 2.59 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.1,
+        "stp_mld": 0.66,
+        "tanker_contract_mld": 3.09,
+        "normalized_distance": 0.392,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.66 MLD decentralized STP reuse; contract 3.09 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 21.1,
+        "stp_mld": 0.646,
+        "tanker_contract_mld": 0.003,
+        "normalized_distance": 0.431,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 21.1%; dispatch 0.65 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "202": {
+    "ward_name": "Ward_203_Subrahmanyapura",
+    "shortfall_upper_mld": 2.72,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 0.6,
+        "stp_mld": 0.007,
+        "tanker_contract_mld": 2.585,
+        "normalized_distance": 0.235,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: contract 2.59 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 0.732,
+        "tanker_contract_mld": 2.787,
+        "normalized_distance": 0.433,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.73 MLD decentralized STP reuse; contract 2.79 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 16.3,
+        "stp_mld": 0.943,
+        "tanker_contract_mld": 0.001,
+        "normalized_distance": 0.463,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 16.3%; dispatch 0.94 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "212": {
+    "ward_name": "Ward_213_Jaraganahalli",
+    "shortfall_upper_mld": 2.65,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 1.3,
+        "stp_mld": 0.082,
+        "tanker_contract_mld": 2.323,
+        "normalized_distance": 0.235,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 1.3%; dispatch 0.08 MLD decentralized STP reuse; contract 2.32 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 0.94,
+        "tanker_contract_mld": 3.088,
+        "normalized_distance": 0.5,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.94 MLD decentralized STP reuse; contract 3.09 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 28.3,
+        "stp_mld": 0.485,
+        "tanker_contract_mld": 0.0,
+        "normalized_distance": 0.5,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 28.3%; dispatch 0.49 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "89": {
+    "ward_name": "Ward_090_Ramamurthy_Nagar",
+    "shortfall_upper_mld": 2.64,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 1.7,
+        "stp_mld": 0.054,
+        "tanker_contract_mld": 2.161,
+        "normalized_distance": 0.203,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 1.7%; dispatch 0.05 MLD decentralized STP reuse; contract 2.16 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 0.724,
+        "tanker_contract_mld": 3.163,
+        "normalized_distance": 0.414,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.72 MLD decentralized STP reuse; contract 3.16 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 24.9,
+        "stp_mld": 0.809,
+        "tanker_contract_mld": 0.007,
+        "normalized_distance": 0.521,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 24.9%; dispatch 0.81 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "22": {
+    "ward_name": "Ward_023_Rajagopal_Nagar",
+    "shortfall_upper_mld": 2.58,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 0.8,
+        "stp_mld": 0.016,
+        "tanker_contract_mld": 2.349,
+        "normalized_distance": 0.193,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: contract 2.35 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 1.041,
+        "tanker_contract_mld": 1.404,
+        "normalized_distance": 0.345,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 1.04 MLD decentralized STP reuse; contract 1.40 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 29.6,
+        "stp_mld": 1.302,
+        "tanker_contract_mld": 0.001,
+        "normalized_distance": 0.692,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 29.6%; dispatch 1.30 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "200": {
+    "ward_name": "Ward_201_Katriguppe",
+    "shortfall_upper_mld": 2.57,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 1.2,
+        "stp_mld": 0.018,
+        "tanker_contract_mld": 2.25,
+        "normalized_distance": 0.188,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 1.2%; contract 2.25 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 0.685,
+        "tanker_contract_mld": 3.511,
+        "normalized_distance": 0.416,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.68 MLD decentralized STP reuse; contract 3.51 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 16.0,
+        "stp_mld": 1.193,
+        "tanker_contract_mld": 0.002,
+        "normalized_distance": 0.482,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 16.0%; dispatch 1.19 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "32": {
+    "ward_name": "Ward_033_Hemmigepura",
+    "shortfall_upper_mld": 2.56,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 0.3,
+        "stp_mld": 0.095,
+        "tanker_contract_mld": 2.196,
+        "normalized_distance": 0.223,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.10 MLD decentralized STP reuse; contract 2.20 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 1.12,
+        "tanker_contract_mld": 2.29,
+        "normalized_distance": 0.498,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 1.12 MLD decentralized STP reuse; contract 2.29 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 23.8,
+        "stp_mld": 0.401,
+        "tanker_contract_mld": 0.001,
+        "normalized_distance": 0.423,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 23.8%; dispatch 0.40 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "213": {
+    "ward_name": "Ward_214_Puttenahalli",
+    "shortfall_upper_mld": 2.54,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 9.5,
+        "stp_mld": 0.004,
+        "tanker_contract_mld": 0.945,
+        "normalized_distance": 0.199,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 9.5%; contract 0.94 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 0.88,
+        "tanker_contract_mld": 1.673,
+        "normalized_distance": 0.329,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.88 MLD decentralized STP reuse; contract 1.67 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 13.2,
+        "stp_mld": 0.571,
+        "tanker_contract_mld": 0.008,
+        "normalized_distance": 0.307,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 13.2%; dispatch 0.57 MLD decentralized STP reuse"
+      }
+    ]
+  },
+  "93": {
+    "ward_name": "Ward_094_A._Narayanapura",
+    "shortfall_upper_mld": 2.47,
+    "counterfactuals": [
+      {
+        "demand_cut_pct": 6.5,
+        "stp_mld": 0.016,
+        "tanker_contract_mld": 1.289,
+        "normalized_distance": 0.187,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 6.5%; contract 1.29 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 0.0,
+        "stp_mld": 0.693,
+        "tanker_contract_mld": 2.141,
+        "normalized_distance": 0.315,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: dispatch 0.69 MLD decentralized STP reuse; contract 2.14 MLD emergency tanker supply"
+      },
+      {
+        "demand_cut_pct": 18.9,
+        "stp_mld": 1.041,
+        "tanker_contract_mld": 0.004,
+        "normalized_distance": 0.485,
+        "valid_at_conformal_upper": 1,
+        "valid_at_point_forecast": 1,
+        "action_text": "Action Plan: curtail demand by 18.9%; dispatch 1.04 MLD decentralized STP reuse"
+      }
+    ]
+  }
+}

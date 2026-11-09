@@ -1,0 +1,38 @@
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+  
+  .sidebar,
+  .app-header .header-right,
+  .btn,
+  .combobox,
+  .nav-menu,
+  .skip-link {
+    display: none !important;
+  }
+  
+  #app-root {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  
+  .main-wrapper,
+  .view-container {
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+  
+  .card,
+  .kpi-card,
+  .briefing-card {
+    border: 1px solid #CCC !important;
+    box-shadow: none !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 12pt !important;
+  }
+}
+
